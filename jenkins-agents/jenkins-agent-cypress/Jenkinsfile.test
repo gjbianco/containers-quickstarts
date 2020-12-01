@@ -1,0 +1,18 @@
+pipeline {
+    agent {
+      label 'jenkins-agent-cypress'
+    }
+
+    stages {
+        stage ('Run Test') {
+            steps {
+              sh """
+                  npm -v
+                  node -v
+              """
+            }
+        }
+
+    }
+
+}
